@@ -1,0 +1,173 @@
+html {
+    background-color: #049af8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    background-color: #049af8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+#red_hover:hover {
+    background-color: #f52525;
+    color: white;
+}
+
+
+.white_btn {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    background-color: white;
+    border-radius: 20px;
+    width: 120px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.white_btn:hover {
+    background-color: #e2e2e2;
+    transition: background-color 0.5s ease;
+}
+
+.green_btn {
+    display:inline-block;
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    border-radius: 20px;
+    width: 180px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #049af8;
+    color: white;
+    margin: 10px;
+}
+
+.delete_btn {
+    background-color: #f34646;
+}
+
+.delete_btn:hover {
+    background-color: #b42929;
+    transition: background-color 0.5s ease;
+}
+
+.update_btn {
+    background-color: #049af8;
+}
+
+.update_btn:hover {
+    background-color: #157dbd;
+    transition: background-color 0.5s ease;
+}
+
+table tr .delete_btn, table tr .update_btn  {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    display: none;
+    float:right;
+}
+
+table tr:hover .delete_btn, table tr:hover .update_btn {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+}
+
+table tr td .table_btn:hover {
+}
+
+.input {
+    outline: none;
+    border: none;
+    width: 370px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #edf5f3;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.green_btn:hover {
+    background-color: #157dbd;
+    transition: background-color 0.5s ease;
+}
+
+.green_btn:active {
+    background-color: #049af8;
+    transition: background-color 0.5s ease;
+}
+
+#logo {
+    width: 125px;
+    margin-left: 25px;
+    padding: 10px 0;
+}
+
+.property_list {
+    padding-top: 25px;
+    background-color: white;
+    height: 800px;
+}
+
+.property_list h2 {
+    margin-left: 100px;
+}
+
+#property_table {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#property_form {
+    margin-left: 100px;
+    margin-bottom: 25px;
+}
+
+#add_property_header {
+    display: flex;
+}
+
+#add_property_header button {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+}
+
+footer h1 {
+    color: white;
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    background-color: #049af8;
+}
