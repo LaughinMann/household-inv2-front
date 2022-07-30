@@ -27,7 +27,7 @@ const Main = () => {
 	};
 
 	useEffect(() => {
-		fetch("http://localhost:8080/api/users/getuserinfo", {
+		fetch("https://property-system-backend.herokuapp.com/api/users/getuserinfo", {
 			headers: {"Content-Type": "application/json"},
 			method: "POST",
 			body: JSON.stringify({token: localStorage.getItem("token")})
