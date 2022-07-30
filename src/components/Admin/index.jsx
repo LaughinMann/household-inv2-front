@@ -84,7 +84,7 @@ const Admin = () => {
 	};
 
 	useEffect(() => {
-		fetch("https://phenomenal-figolla-cd6b60.netlify.app/api/users/getuserinfo", {
+		fetch("https://property-sys-backend.herokuapp.com/api/users/getuserinfo", {
 			headers: {"Content-Type": "application/json"},
 			method: "POST",
 			body: JSON.stringify({token: localStorage.getItem("token")})
@@ -95,7 +95,7 @@ const Admin = () => {
 		e.preventDefault();
 		try {
 			console.log(newUserData);
-			const url = "https://phenomenal-figolla-cd6b60.netlify.app/admin/set-user-details";
+			const url = "https://property-sys-backend.herokuapp.com/admin/set-user-details";
 			const { data: res } = await axios.post(url, newUserData);
 			console.log(res.message);
 		} catch (error) {
@@ -112,7 +112,7 @@ const Admin = () => {
 	const getUserData = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "https://phenomenal-figolla-cd6b60.netlify.app/admin/get-user";
+			const url = "https://property-sys-backend.herokuapp.com/admin/get-user";
 			const {userData: res} = axios.post(url, userEmailLookup).then(function (response)
 			{
 				setUserData(response.data);
@@ -139,7 +139,7 @@ const Admin = () => {
 			try {
 				console.log("Called");
 				console.log(userEmailLookup.email);
-				const url = "https://phenomenal-figolla-cd6b60.netlify.app/api/updateprofile/get-authorized-users";
+				const url = "https://property-sys-backend.herokuapp.com/api/updateprofile/get-authorized-users";
 				const {authorizedUsers: res} = await axios.post(url, userEmailLookup)
 					.then((response) => {
 						authUsers = response.data;
@@ -162,7 +162,7 @@ const Admin = () => {
 
 	async function GetPropertysManually() {
 		try {
-			const url = "https://phenomenal-figolla-cd6b60.netlify.app/api/property/get-properties/";
+			const url = "https://property-sys-backend.herokuapp.com/api/property/get-properties/";
 			const {userProperties: res} = await axios.post(url, userEmailLookup)
 				.then((response) => {
 					UsersProperty = response.data;
@@ -184,7 +184,7 @@ const Admin = () => {
 		e.preventDefault();
 		try {
 			console.log(authorizedUserChanges);
-			const url = "https://phenomenal-figolla-cd6b60.netlify.app/admin/add-authorized-user";
+			const url = "https://property-sys-backend.herokuapp.com/admin/add-authorized-user";
 			const { data: res } = await axios.post(url, authorizedUserChanges).then((response) => {
 				console.log(response);
 				GetAuthUserManually();
@@ -206,7 +206,7 @@ const Admin = () => {
 		e.preventDefault();
 		try {
 			console.log(authorizedUserChanges);
-			const url = "https://phenomenal-figolla-cd6b60.netlify.app/admin/remove-authorized-user";
+			const url = "https://property-sys-backend.herokuapp.com/admin/remove-authorized-user";
 			const { data: res } = await axios.post(url, authorizedUserChanges).then((response) => {
 				console.log(response);
 				GetAuthUserManually();
@@ -228,7 +228,7 @@ const Admin = () => {
 		e.preventDefault();
 		try {
 			console.log(password_data);
-			const url = "https://phenomenal-figolla-cd6b60.netlify.app/admin/set-user-password";
+			const url = "https://property-sys-backend.herokuapp.com/admin/set-user-password";
 			const { data: res } = await axios.post(url, password_data);
 			console.log(res.message);
 		} catch (error) {

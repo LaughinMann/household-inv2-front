@@ -27,7 +27,7 @@ const Main = () => {
 	};
 
 	useEffect(() => {
-		fetch("https://phenomenal-figolla-cd6b60.netlify.app/api/users/getuserinfo", {
+		fetch("https://property-sys-backend.herokuapp.com/api/users/getuserinfo", {
 			headers: {"Content-Type": "application/json"},
 			method: "POST",
 			body: JSON.stringify({token: localStorage.getItem("token")})
