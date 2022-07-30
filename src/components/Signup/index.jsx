@@ -20,7 +20,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "https://property-system-backend.herokuapp.com/api/users";
+			const url = "https://phenomenal-figolla-cd6b60.netlify.app/api/users";
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
 			console.log(res.message);

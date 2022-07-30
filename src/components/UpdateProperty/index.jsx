@@ -49,7 +49,7 @@ function UpdateProperty() {
 	const [error, setError] = useState("");
 
 	useEffect(() => {
-		fetch("https://property-system-backend.herokuapp.com/api/users/getuserinfo", {
+		fetch("https://phenomenal-figolla-cd6b60.netlify.app/api/users/getuserinfo", {
 			headers: {"Content-Type": "application/json"},
 			method: "POST",
 			body: JSON.stringify({token: localStorage.getItem("token")}),
@@ -66,7 +66,7 @@ function UpdateProperty() {
 			getPropertyUserData.email = userData.email;
 			try {
 				console.log(userData.email);
-				const url = "https://property-system-backend.herokuapp.com/api/property/get-properties/";
+				const url = "https://phenomenal-figolla-cd6b60.netlify.app/api/property/get-properties/";
 				const {userProperties: res} = await axios
 					.post(url, getPropertyUserData)
 					.then((response) => {
@@ -99,7 +99,7 @@ function UpdateProperty() {
 		e.preventDefault();
 		try {
 			console.log(data);
-			const url = "https://property-system-backend.herokuapp.com/api/update-property";
+			const url = "https://phenomenal-figolla-cd6b60.netlify.app/api/update-property";
 			const {data: res} = await axios.post(url, data);
 			console.log(res.message);
 		} catch (error) {

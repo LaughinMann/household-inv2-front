@@ -60,7 +60,7 @@ const Property = () => {
   };
 
   useEffect(() => {
-    fetch("https://property-system-backend.herokuapp.com/api/users/getuserinfo", {
+    fetch("https://phenomenal-figolla-cd6b60.netlify.app/api/users/getuserinfo", {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify({ token: localStorage.getItem("token") }),
@@ -76,7 +76,7 @@ const Property = () => {
       getPropertyUserData.email = userData.email;
       try {
         console.log(userData.email);
-        const url = "https://property-system-backend.herokuapp.com/api/property/get-properties/";
+        const url = "https://phenomenal-figolla-cd6b60.netlify.app/api/property/get-properties/";
         const { userProperties: res } = await axios
           .post(url, getPropertyUserData)
           .then((response) => {
@@ -97,7 +97,7 @@ const Property = () => {
   }, [userData.email]);
 
   const deleteProperty = (id) => {
-    //axios.delete(`https://property-system-backend.herokuapp.com/api/property/delete-property/${id}`);
+    //axios.delete(`https://phenomenal-figolla-cd6b60.netlify.app/api/property/delete-property/${id}`);
   };
 
   //Set the page tab title

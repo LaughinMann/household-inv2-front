@@ -46,7 +46,7 @@ const AddProperty = () => {
 
   // Gets user data
   useEffect(() => {
-    fetch("https://property-system-backend.herokuapp.com/api/users/getuserinfo", {
+    fetch("https://phenomenal-figolla-cd6b60.netlify.app/api/users/getuserinfo", {
       headers: { "Content-Type": "application/json" },
       method: "POST",
       body: JSON.stringify({ token: localStorage.getItem("token") }),
@@ -60,7 +60,7 @@ const AddProperty = () => {
     try {
       propertyData.user_id = userData._id;
       console.log(propertyData);
-      const url = "https://property-system-backend.herokuapp.com/api/property"; // api url that you're trying to access
+      const url = "https://phenomenal-figolla-cd6b60.netlify.app/api/property"; // api url that you're trying to access
       const { data: res } = await axios.post(url, propertyData); // 2nd param = info getting put into req.body
       console.log(res.message);
     } catch (error) {
