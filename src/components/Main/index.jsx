@@ -37,7 +37,7 @@ const Main = () => {
 
 	const handleLogout = () => {
 		localStorage.removeItem("token");
-		window.location.reload();
+		navigate('/');
 	};
 
 	//Set the page tab title
